@@ -25,7 +25,7 @@ module.exports = {
     if (!match) {
       return res.status(401).json({ msg: "No matching password Unauthorized" });
     }
-    
+
     // create access token
     const accessToken = jwt.sign(
       {
@@ -35,7 +35,7 @@ module.exports = {
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "10s" } // 10s only for development
+      { expiresIn: "1m" } // 10s only for development
     );
 
     // create a refresh token
@@ -50,7 +50,7 @@ module.exports = {
     // create secure cookie with the refresh token
     res.cookie("jwt", refreshToken, {
       httpOnly: true, //accessible only by web server
-      secure: true, //https
+      // secure: true, //https
       sameSite: "None", // cross-site cookie
       maxAge: 7 * 24 * 60 * 60 * 1000, // cookies expiry: set to match ...
     });
@@ -66,7 +66,7 @@ module.exports = {
     const cookies = req.cookies;
 
     if (!cookies?.jwt) {
-      return res.status(401).json({ msg: "Unauthorized" });
+      return res.status(401).json({ msg: "No jwt Unauthorized" });
     }
 
     const refreshToken = cookies.jwt;
@@ -76,7 +76,7 @@ module.exports = {
       process.env.REFRESH_TOKEN_SECRET,
       asyncHandler(async (err, decodedInfo) => {
         if (err) {
-          return res.status(403).json({ msg: "FORBIDDEN" });
+          return res.status(403).json({ msg: "Forbidden" });
         }
 
         const foundUser = User.findOne({
@@ -84,7 +84,7 @@ module.exports = {
         }).exec();
 
         if (!foundUser) {
-          res.status(401).json({ msg: "Unauthorized" });
+          return res.status(401).json({ msg: "no user found Unauthorized" });
         }
 
         const accessToken = jwt.sign(
@@ -95,7 +95,7 @@ module.exports = {
             },
           },
           process.env.ACCESS_TOKEN_SECRET,
-          { expiresIn: "10s" }
+          { expiresIn: "1m" }
         );
 
         res.json({ accessToken });
