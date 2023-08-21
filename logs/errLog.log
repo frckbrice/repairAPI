@@ -1,2 +1,115 @@
 2023-08-17	15:24:52	11e70af6-5109-4820-aa34-37f197eac196	Error:Not allowed by CORS	GET	/	https://www.google.com
 com
+2023-08-18	15:38:10	7a9dfb42-cff3-4fa4-888d-c91a961bcaa6	TypeError:duplicateUser?._id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:42:08	90603e27-a44f-4e9e-b860-2d68bfcd857a	TypeError:duplicateUser?._id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:42:52	502988cb-c7d5-4e28-8af5-80bb0be4e9a1	TypeError:duplicateUser?._id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:47:49	4a98e826-2583-488a-9d75-f02ea099c07f	TypeError:duplicateUser?._id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:48:48	edb439da-f511-4789-aa51-4a51e5c1cc63	TypeError:duplicateUser?._id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:51:07	824539a4-3588-4fe0-9f9e-3788d51e7a35	TypeError:duplicateUser?._id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:52:17	dcb72307-1d8b-4b48-b4c2-a2d95410b12c	TypeError:duplicateUser?._id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:52:40	ab3431d1-ddb3-43b4-991f-86133ab697ef	TypeError:duplicateUser?.id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	15:53:13	f19afad0-25d1-4499-a751-c28ee45fee43	TypeError:duplicateUser.id.toSting is not a function	PATCH	/users	undefined
+2023-08-18	16:10:13	094585df-fa36-4e27-a38d-6f77cf88f831	TypeError:Assignment to constant variable.	PATCH	/users	undefined
+2023-08-18	16:11:47	78734993-1b93-4e34-abdb-cdb67377dcf1	ReferenceError:duplicateUser_id is not defined	PATCH	/users	undefined
+2023-08-18	16:55:54	0a629a6c-d497-4464-8c74-3b3192b3fc18	ReferenceError:reply is not defined	GET	/users/64df7cf27044255aee63dfbb	undefined
+2023-08-18	17:50:48	051da355-df71-4c71-8b9c-bea8323dfa18	Error:Cannot set headers after they are sent to the client	POST	/notes	undefined
+2023-08-18	18:21:49	50a8aa0f-b315-475e-8296-5b0d1e5b7c72	ReferenceError:Cannot access 'notes' before initialization	POST	/notes	undefined
+2023-08-18	18:22:34	2d3cbdee-3716-47e3-8616-e05ae84f757d	ReferenceError:notes is not defined	POST	/notes	undefined
+2023-08-18	22:19:23	10906816-5fb9-4db6-9fe6-34af0a32d365	MongoServerError:E11000 duplicate key error collection: test.notes index: code_1 dup key: { code: null }	POST	/notes	undefined
+2023-08-18	22:23:19	c2e37d38-22e0-4fb4-b156-313167e87b87	MongoServerError:E11000 duplicate key error collection: test.notes index: code_1 dup key: { code: null }	POST	/notes	undefined
+2023-08-18	22:38:09	c9bd99f7-1e2d-4a1b-8903-200ad9c377b1	MongoServerError:E11000 duplicate key error collection: test.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+2023-08-19	00:57:42	d4df136d-6bcf-4443-a99b-0635e2febdb8	ValidationError:note validation failed: user: Cast to ObjectId failed for value "brice" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+2023-08-19	00:59:56	f020a715-42f6-41e9-94ee-08b23e5af0d9	MongoServerError:E11000 duplicate key error collection: test.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+2023-08-19	01:09:56	aff1ffd2-55a5-4e97-ab14-f4e0c1169005	SyntaxError:Unexpected string in JSON at position 38	GET	/notes	undefined
+2023-08-19	01:27:39	44abd7f9-2f78-4835-b443-07a558d906eb	TypeError:Cannot read properties of undefined (reading 'length')	DELETE	/notes	undefined
+2023-08-19	01:28:48	64eb47e9-d1db-4d76-958c-34cbb6c76e1b	TypeError:Assignment to constant variable.	DELETE	/notes	undefined
+2023-08-19	01:33:57	7857c238-00d0-401e-86d4-ca029d9186e8	ReferenceError:deletedUser is not defined	DELETE	/notes	undefined
+2023-08-19	17:39:52	cc6cd012-d0d7-4750-82f5-9a0c5fd0c100	Error:Not allowed by CORS	GET	/users	http://localhost:5173
+2023-08-19	17:42:30	c5b9416f-5bd9-446e-b0d1-e16f2a88a21a	Error:Not allowed by CORS	GET	/users	http://localhost:5173
+2023-08-20	15:03:05	cb588be1-18c9-4a55-b3c7-7854662cf2fd	TypeError:roles is not iterable	PATCH	/users	undefined
+2023-08-20	15:07:06	6cfa9822-f092-4d40-9d01-6ccb3e65dc11	TypeError:Cannot read properties of null (reading 'id')	PATCH	/users	undefined
+2023-08-20	15:08:18	351b0e32-09b8-4f8a-9492-947d97cf2b94	TypeError:Cannot read properties of null (reading 'id')	PATCH	/users	undefined
+2023-08-20	15:09:09	4df3a320-93ec-4117-9ed0-1d12d6533890	TypeError:Cannot read properties of null (reading '_id')	PATCH	/users	undefined
+2023-08-20	17:53:17	bb755648-2b82-4e0a-81e0-18f7767d4c1b	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	17:53:37	80f5ae72-5ac7-4b51-9977-3439db5bd380	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	17:54:04	1fa15426-fc7b-4793-a390-f96e1ae0e4c6	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	17:54:27	a87736dc-2cfa-4ea2-a755-f7580b452ea3	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	21:27:33	00d9c912-1684-4a17-b73b-ed7664fbaa10	MongoServerSelectionError:getaddrinfo EAI_AGAIN ac-rmqmpwj-shard-00-01.gjarrkx.mongodb.net	GET	/notes	http://localhost:5173
+2023-08-20	21:27:33	6a464425-ec70-4b31-864c-5797e07616da	MongoServerSelectionError:getaddrinfo EAI_AGAIN ac-rmqmpwj-shard-00-01.gjarrkx.mongodb.net	GET	/users	http://localhost:5173
+2023-08-20	23:46:34	868f0833-a5d9-4171-ba06-f041df98f141	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:46:45	4f28b7e4-63d4-4892-a36f-cd8e08a6da5c	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:47:14	a9179e85-1c4f-47f6-8e48-5f915a3737d8	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:47:58	2357313d-6933-49b4-b151-559df6e7642d	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:48:38	3e31b1d5-1c67-47cb-8db9-651351063829	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:49:38	682ea807-2a99-4057-95bf-624f1e3b1319	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:50:38	fb4d10db-7e08-4676-8583-209be14f3eb3	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:51:38	e8a38045-28fa-41d3-8060-c497cdec0d90	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:52:38	0a88f192-66c7-4925-9c7c-90cb318d4add	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:53:38	fd15aa61-2115-42a7-9185-6171e0d7a814	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:54:38	01e8404f-0492-43a9-bfae-89734c59295f	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:55:38	e713c2ed-ae81-45c7-b6b7-6b78dd220f39	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:56:38	93242f7f-c1ff-4fd9-a57e-81d74b737669	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:57:38	afd17371-40e4-4e27-83c2-6bea10b4d27d	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:58:38	642bbd65-a30f-4c7b-a6d4-ae69a85a2d47	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-20	23:59:38	a900e47e-e4de-4cfe-a32b-34516bcd0e95	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:00:38	90ebd2ad-8813-40fb-b6e0-b242096f9d63	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:01:38	1b9b3f55-ced3-44a7-9436-8f5a4826dffe	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:02:38	9b348f59-982e-4596-8a5f-20bc3c60d127	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:03:38	277e9869-8673-43ee-a8fe-340d83c054d4	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:04:38	54c157d2-8d2c-442e-8f99-4cc4d2163fea	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:05:39	f70b13d6-df77-4790-bcd7-069d9cd72ed4	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:06:39	e4599f78-a37d-4512-8006-624f46386c24	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:07:39	73d672e9-1dde-4f46-8c62-193f728340d0	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:08:39	3e793039-c28f-40d3-9b98-ec6981789278	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:09:39	b3cd7fdb-98ad-40f5-8c57-2542e58c9d74	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:10:39	5cc843a5-927f-4d8d-8597-d1d21227dc80	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:11:39	353632f7-4dab-49d8-b158-4f0d552e3b38	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:12:39	8104051d-0dd3-4f54-89a7-ef1dc13dd2ad	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:13:39	8232350d-5063-44d7-a307-7a2e0471c44f	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:14:39	245fc111-a545-4bab-920a-8de96da32ae7	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:15:39	875cc6ce-7731-468a-9288-ee23043e0fa5	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:16:39	8a912353-6295-4d02-bf86-19b2c56f28d6	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:17:39	b1a631b5-8b40-4f6f-940f-74e312e6ffb3	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:18:39	ab21e20e-1e16-487d-8026-1628b67d26ed	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:19:39	caa12629-06a3-4c03-a22e-fad4e738ff46	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:20:39	b1a91f22-6922-4576-b8eb-2ee9b4b1aaab	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:21:39	2d7d5bcb-1e6d-432b-a809-c02422be0cb4	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:22:39	30ea3a94-dabd-4426-b71f-4a86a112d2b1	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:23:39	82f7216a-c4a8-4eca-88d3-866feffca812	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:24:39	0678b892-9cef-4c70-ab00-4c3b769a7827	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:25:39	45052046-6cb3-4878-b4d8-f002e804d80b	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:26:39	b85e4da0-fb99-4e4d-a56f-314df6f3342d	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:27:39	a6649483-0733-4d7e-94ec-abb41106e1a1	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:28:39	a2315017-a67a-453a-bcf1-caefb6c9a7b8	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:29:39	7391cacb-9dcf-483f-aaa8-6bed36a4741f	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:30:39	0bcee622-7356-468e-82b8-b3ed37f704b5	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:31:39	b60c1789-b991-4882-990b-a8609c702f13	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:32:39	97057f1e-ad5a-4e49-b595-dc5ad6ad403e	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:33:39	01bfa02e-8439-4508-8506-f44f385653f3	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:34:39	ededd77a-f42a-4d6e-9fd2-34cd68fc3155	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:35:39	34b4a80e-9e30-463b-8abf-dbdd3ab08093	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:39	05670e5a-7604-4257-84e1-d531148d55ef	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:41	c3bec027-c90e-42f5-8047-05bbddc54278	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:42	c011108d-4ef7-4d85-bb7b-b5fac1ea2518	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:42	fe38b850-636e-47a8-a97f-2f5129c4922a	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:43	e7e2bd33-70c3-4616-8c8d-9be6ec68f691	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:43	8a89e1a2-26bd-44e4-803d-155ac2c00472	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:44	ab25a64f-c27f-4b05-8d37-80e6f38ce218	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:44	a2b5b7fd-3333-4052-b09a-9b9c6c3f8a4a	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:45	75ac5f35-b1d3-406d-ad18-4da597ee60e6	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:45	0fad4b15-6ad0-4874-90c5-5a6b8360a0c0	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:46	c49f3766-25ce-4134-a91f-efdcb37258f9	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:47	411ce65d-d026-40ab-be1a-065592156773	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:47	961b5884-a7d9-4591-bb09-3d7df2a4fa70	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:48	264b45d1-09ef-4c07-9b10-2681cb5e98db	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:51	67903d7e-bd8c-4587-a3f8-0d7964ebc26b	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:36:53	9dfbc35e-d541-42aa-84a9-a77092fa691f	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:37:51	aaaffd8a-b88e-42ba-b988-4189635e548d	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:37:54	b0df01a4-e106-4669-b96a-aab5d78bea9e	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:37:59	b7c0f1ea-acff-4d18-bd08-9a9d3d6aead2	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:38:02	d41fd9fe-79e9-4c18-9c7c-376683587fe5	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:38:05	f211bd75-ba53-4f97-a1dd-e5d4ada121ee	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:38:08	28bd541e-33b9-455e-a432-f9d404bbd8a0	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	00:38:39	96cdead2-65d1-4106-8122-001678d0db67	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
+2023-08-21	01:13:31	8b4431e8-ef12-4b14-99fe-18bf90c50700	Error:data must be a string or Buffer and salt must either be a salt string or a number of rounds	POST	/users	undefined
+2023-08-21	11:00:08	5cf9d144-5ab7-49e7-842f-9feaa2ef5ea3	ReferenceError:log is not defined	GET	/notes	http://localhost:5173

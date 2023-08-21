@@ -2,7 +2,7 @@ const allowedOrigin = require("./allowedOrigin");
 
 const corsOptions = {
   origin: (origin, callback) => {
-    // we add no origin in case of the test in thunder client or postman because they don't provide origin.
+    // we add !origin to allow thunder client or postman to permorm a test since they don't provide origin.
     if (allowedOrigin.includes(origin) || !origin) {
       callback(null, true);
     } else {
