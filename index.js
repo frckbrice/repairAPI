@@ -25,6 +25,7 @@ app.use("/", express.static(path.join(__dirname, "public")));
 
 app.use("/", require("./routes/root"));
 app.use("/users", require("./routes/user.route"));
+app.use("/auth", require("./routes/auth.route"));
 app.use("/notes", require("./routes/note.route"));
 
 //for anything that is not found. this must after all the middlewares
@@ -41,25 +42,6 @@ app.all("*", (req, res) => {
 
 // we use this middleware at the end of all others
 app.use(errorHandler);
-
-// app.listen(port, async () => {
-//   console.log(`server is running on port ${port}`);
-//   await mongoose
-//     .connect(process.env.DATABASE_URI, {
-//       useNewUrlParser: true,
-//       useUnifiedTopology: true,
-//     })
-//     .then(() => {
-//       console.log("database successfully connected");
-//     })
-//     .catch((err) => {
-//       console.log("Failed to connect to database", err);
-//       logEvents(
-//         `${err.no}:${err.code}\t${err.syscall}\t${err.hostname}`,
-//         "mongoErrLog.log"
-//       );
-//     });
-// });
 
 mongoose.connection.once("open", () => {
   console.log("database successfully connected");

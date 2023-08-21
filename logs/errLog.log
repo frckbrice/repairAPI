@@ -113,3 +113,17 @@ com
 2023-08-21	00:38:39	96cdead2-65d1-4106-8122-001678d0db67	Error:Not allowed by CORS	GET	/socketcluster/	chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd
 2023-08-21	01:13:31	8b4431e8-ef12-4b14-99fe-18bf90c50700	Error:data must be a string or Buffer and salt must either be a salt string or a number of rounds	POST	/users	undefined
 2023-08-21	11:00:08	5cf9d144-5ab7-49e7-842f-9feaa2ef5ea3	ReferenceError:log is not defined	GET	/notes	http://localhost:5173
+2023-08-21	13:34:58	ea983562-10cf-4f63-a0c7-64405c797d82	MongoServerSelectionError:getaddrinfo EAI_AGAIN ac-rmqmpwj-shard-00-02.gjarrkx.mongodb.net	GET	/notes	http://localhost:5173
+2023-08-21	13:34:58	319d2665-e216-4af9-b8ac-d4ca73e6fa7b	MongoServerSelectionError:getaddrinfo EAI_AGAIN ac-rmqmpwj-shard-00-02.gjarrkx.mongodb.net	GET	/users	http://localhost:5173
+2023-08-21	14:06:12	4fe3d80f-14db-4a28-a97d-e18d8d84748d	TypeError:Cannot read properties of undefined (reading 'toString')	PATCH	/notes	http://localhost:5173
+2023-08-21	14:12:54	b4cb1b25-ca91-4f71-8dfc-6b9baa49c059	TypeError:Cannot read properties of undefined (reading 'toString')	PATCH	/notes	http://localhost:5173
+2023-08-21	14:15:08	c9179055-25d9-448d-90be-9306209ed7a4	TypeError:Cannot read properties of undefined (reading 'toString')	PATCH	/notes	http://localhost:5173
+2023-08-21	15:02:08	3fa73da7-643f-4233-bf00-267fcf0fca32	MongoServerSelectionError:connection <monitor> to 35.247.208.203:27017 timed out	GET	/notes	http://localhost:5173
+2023-08-21	15:02:08	79ec628b-e89b-4053-9f48-96d6a0714008	MongoServerSelectionError:connection <monitor> to 35.247.208.203:27017 timed out	GET	/users	http://localhost:5173
+2023-08-21	19:05:04	503cccc9-4732-4d22-93b2-ab14b4c55de0	Error:"expireIn" is not allowed in "options"	POST	/auth	undefined
+2023-08-21	19:06:11	34e6ffc3-01c2-4c0b-8648-d07358075397	Error:"expireIn" is not allowed in "options"	POST	/auth	undefined
+2023-08-21	19:08:28	b93b2b00-760f-4495-8093-719d60f3e97d	Error:"expireIn" is not allowed in "options"	POST	/auth	undefined
+2023-08-21	19:08:52	535be641-6de1-44cc-9dc6-c30237ebb1ee	Error:"expireIn" is not allowed in "options"	POST	/auth	undefined
+2023-08-21	19:09:15	61e6bd31-c137-426c-8343-e17e61d9935c	Error:"expireIn" is not allowed in "options"	POST	/auth	undefined
+2023-08-21	19:09:41	b7c27260-b73a-4d5c-8835-df2e65df0948	Error:"expireIn" is not allowed in "options"	POST	/auth	undefined
+2023-08-21	19:10:25	f8d213f1-febe-4273-b31f-9bf6c273badc	Error:"expireIn" is not allowed in "options"	POST	/auth	undefined

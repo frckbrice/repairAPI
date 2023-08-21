@@ -25,8 +25,7 @@ module.exports = {
     }
     const notesWithUser = await Promise.all(
       notes.map(async (note) => {
-        const user = User.findById(note.user).lean().exec();
-        console.log(user.username)
+        const user = await User.findById(note.user).lean().exec();
         return { ...note, username: user.username };
       })
     );
@@ -39,6 +38,7 @@ module.exports = {
   //access Private
   createNote: asyncHandler(async (req, res) => {
     const { user, title, text } = req.body;
+    console.log({ user, title, text });
 
     if (!user || !title | !text) {
       return res.status(400).json({ msg: "All the fields are required" });
@@ -82,15 +82,9 @@ module.exports = {
   //route PUT /notes
   //access Private
   updateNote: asyncHandler(async (req, res) => {
-    const { id, user, title, text, complete } = req.body;
+    const { id, user, title, text, completed } = req.body;
 
-    if (
-      !id ||
-      !mongoose.isValidObjectId(user) ||
-      !title ||
-      !text ||
-      typeof complete !== "boolean"
-    ) {
+    if (!id || !user || !title || !text || typeof completed !== "boolean") {
       return res
         .status(400)
         .json({ msg: "Bad credentials or all fields are not filed" });
@@ -102,15 +96,17 @@ module.exports = {
     }
 
     // check for duplicates note titles
-    const duplicate = Note.findOne({ title }).lean().exec();
-    if (duplicate && duplicate?._id.toString() !== id) {
+    const duplicate = await Note.findOne({ title }).lean().exec();
+    console.log('duplicate',duplicate);
+    if (duplicate && duplicate?._id.toString() !== id.toString()) {
+      console.log(duplicate);
       return res.status(409).json({ msg: "Duplicate note title" });
     }
 
     note.user = user;
     note.title = title;
     note.text = text;
-    note.complete = complete;
+    note.complete = completed;
 
     const updateNote = await note.save();
 
