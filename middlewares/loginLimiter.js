@@ -4,9 +4,10 @@ const {logEvents} = require('./logger');
 
 const loginLimiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
-  max: 5, //limit the number of IP to 5 login requests per 'window' per minute
+  max: 5, //limit to max of 5 IP login requests per 'window' per minute
   message: { message: 'Too many login attempts from this IP, please try again after a 60 seconds pause'},
-  handler: (req, res, next, options) => { // handle what happer when the limit arrives
+  handler: (req, res, next, options) => { 
+  // handle what happen when the limit rihes
     logEvents(`Too many Requests: ${options.message.message}\t${req.method}\t${req.url }\t${req.headers.origin}`,'errLog.log');
     res.status(options.statusCode).send(options.message);
   },

@@ -17,13 +17,13 @@ module.exports = {
     const foundUser = await User.findOne({ username }).exec();
 
     if (!foundUser || !foundUser.active) {
-      return res.status(401).json({ msg: "Not found or non active! Unauthorized" });
+      return res.status(401).json({ msg: "not found oe inactive Unauthorized" });
     }
     
     const match = await bcrypt.compare(password, foundUser.password);
 
     if (!match) {
-      return res.status(401).json({ msg: "No matching password Unauthorized" });
+      return res.status(401).json({ msg: "not match Unauthorized" });
     }
 
     // create access token
@@ -35,7 +35,7 @@ module.exports = {
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "1m" } // 10s only for development
+      { expiresIn: "15m" } // 10s only for development
     );
 
     // create a refresh token
@@ -44,15 +44,15 @@ module.exports = {
         username: foundUser.username,
       },
       process.env.REFRESH_TOKEN_SECRET,
-      { expiresIn: "1d" }
+      { expiresIn: "7d" }
     );
 
     // create secure cookie with the refresh token
     res.cookie("jwt", refreshToken, {
       httpOnly: true, //accessible only by web server
-      // secure: true, //https
+      secure: true, //https
       sameSite: "None", // cross-site cookie
-      maxAge: 7 * 24 * 60 * 60 * 1000, // cookies expiry: set to match ...
+      maxAge: 7 * 24 * 60 * 60 * 1000, // cookies expiry: set to 7days
     });
 
     // Send accessToken containing username and roles
@@ -66,7 +66,7 @@ module.exports = {
     const cookies = req.cookies;
 
     if (!cookies?.jwt) {
-      return res.status(401).json({ msg: "No jwt Unauthorized" });
+      return res.status(401).json({ msg: "No jwt! Unauthorized" });
     }
 
     const refreshToken = cookies.jwt;
@@ -84,7 +84,7 @@ module.exports = {
         }).exec();
 
         if (!foundUser) {
-          return res.status(401).json({ msg: "no user found Unauthorized" });
+          return res.status(401).json({ msg: "no user found at refresh Unauthorized" });
         }
 
         const accessToken = jwt.sign(
@@ -95,7 +95,7 @@ module.exports = {
             },
           },
           process.env.ACCESS_TOKEN_SECRET,
-          { expiresIn: "1m" }
+          { expiresIn: "15m" }
         );
 
         res.json({ accessToken });
@@ -109,7 +109,7 @@ module.exports = {
   logout: asyncHandler(async (req, res) => {
     const cookies = req.cookies;
     if(!cookies?.jwt) {
-      return res.sendStatus(201) // No content
+      return res.sendStatus(204) // No content
     }
 
     res.clearCookie('jwt', {httpOnly:true, sameSite: 'None', secure: true });
