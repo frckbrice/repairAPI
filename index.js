@@ -1,4 +1,5 @@
 require("dotenv").config();
+require('express-async-errors') // same job as express-aasync-handler. but need only this require for all the app
 const express = require("express");
 const app = express();
 const path = require("path");

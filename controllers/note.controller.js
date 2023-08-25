@@ -38,7 +38,7 @@ module.exports = {
   //access Private
   createNote: asyncHandler(async (req, res) => {
     const { user, title, text } = req.body;
-
+console.log({ user, title, text });
     if (!user || !title | !text) {
       return res.status(400).json({ msg: "All the fields are required" });
     }
