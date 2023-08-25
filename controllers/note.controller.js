@@ -10,7 +10,7 @@ module.exports = {
   getAllNotes: asyncHandler(async (req, res) => {
     // const notes = await Note.find().populate("user").select('-password').exec();
     // console.log(notes);
-    // if (notes?.length === 0) {
+    // if (!notes?.length) {
     //   return res.status(400).json({ msg: "No notes found" });
     // }
     // res.json(notes);
@@ -38,20 +38,28 @@ module.exports = {
   //access Private
   createNote: asyncHandler(async (req, res) => {
     const { user, title, text } = req.body;
-    console.log({ user, title, text });
 
     if (!user || !title | !text) {
       return res.status(400).json({ msg: "All the fields are required" });
     }
 
     //check duplicates note's title
-    const duplicates = await Note.findOne({ title }).exec();
+    const duplicates = await Note.findOne({ title })
+      .collation({ locale: "en", strength: 2 })
+      .lean()
+      .exec();
+
     if (duplicates) {
       return res.status(409).json({ msg: "Duplicate note title" });
     }
-
-    const nte = await Note.create({ user, title, text });
-    console.log(nte);
+    console.log("after seond log");
+    const note = new Note({
+      user,
+      title,
+      text,
+    });
+    const nte = await note.save();
+  
     if (nte) {
       res.status(201).json({ msg: `Note created successfully` });
     } else {
@@ -96,8 +104,11 @@ module.exports = {
     }
 
     // check for duplicates note titles
-    const duplicate = await Note.findOne({ title }).lean().exec();
-    console.log('duplicate',duplicate);
+    const duplicate = await Note.findOne({ title })
+      .collation({ locale: "en", strength: 2 })
+      .lean()
+      .exec();
+    console.log("duplicate", duplicate);
     if (duplicate && duplicate?._id.toString() !== id.toString()) {
       console.log(duplicate);
       return res.status(409).json({ msg: "Duplicate note title" });
@@ -140,6 +151,7 @@ module.exports = {
   //@desc delete a ll notes
   //@route DELETE /notes
   //access Private 64e004cb59a3aecd873d481c
+  //* not yet implemented in frontend
   deleteAllNotesConditionally: asyncHandler(async (req, res) => {
     let { decision, role } = req.body;
 

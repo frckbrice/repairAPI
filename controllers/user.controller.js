@@ -23,25 +23,31 @@ module.exports = {
     let { username, password, roles } = req.body;
 
     // make role always an array
-    if (!Array.isArray(roles) || typeof roles === "undefined") {
-      roles = [roles];
-    }
+    // if (!Array.isArray(roles) || typeof roles === "undefined") {
+    //   roles = [roles]; // or Array.prototypes(roles)
+    // }
 
-    if (!username || !password || !roles?.length) {
+    if (!username || !password) {
       return res.status(400).json({ message: "All fields are required" });
     }
     //check duplicate user
-    const duplicateUser = await User.findOne({ username }).lean().exec();
+    const duplicateUser = await User.findOne({ username })
+      .collation({ locale: "en", strength: 2 })
+      .lean()
+      .exec();
     if (duplicateUser) {
       return res.status(409).json({ message: `${username} already in use` });
     }
     // hash the password
     const hashPw = await bcrypt.hash(password, 10); //generate salt and encrypt
-    const user = await User.create({
-      username,
-      password: hashPw,
-      roles,
-    });
+
+    // we can better take this approch of casting the role since we have made that in the user model
+    const userObject =
+      !Array.isArray(roles) || !roles.length
+        ? { username, password: hashPw }
+        : { username, password: hashPw, roles };
+
+    const user = await User.create(userObject);
     if (user) {
       res
         .status(201)
@@ -76,8 +82,6 @@ module.exports = {
         notes,
       });
     }
-    ("User found ");
-    ("User found ");
 
     res.json({ msg: "User found " });
   }),
@@ -94,11 +98,7 @@ module.exports = {
     }
     console.log(Array.isArray(roles));
     //confirm data
-    if (
-      !username ||
-      !roles.length ||
-      typeof active !== "boolean"
-    ) {
+    if (!username || !roles.length || typeof active !== "boolean") {
       return res.status(400).json({ message: "All fields are required" });
     }
     // first, check if the user exists
@@ -108,8 +108,11 @@ module.exports = {
     }
 
     //find duplicate user
-    const duplicateUser = await User.findOne({ username }).exec();
-    
+    const duplicateUser = await User.findOne({ username })
+      .collation({ locale: "en", strength: 2 })
+      .lean()
+      .exec();
+
     if (duplicateUser && duplicateUser._id.toString() !== id.toString()) {
       console.log(duplicateUser.id);
       return res.status(409).json({ message: "Duplicate username" });

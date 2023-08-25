@@ -181,3 +181,46 @@ com
 2023-08-24	17:45:06	d197ac2e-6d69-4f7b-ba92-b2dd5cc1aa46	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
 2023-08-24	17:46:06	15d89108-9532-41d4-81ff-aebff78a0306	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
 2023-08-24	17:47:06	2ad69ec5-7783-48ad-818e-53dd7a30b476	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	01:47:37	278129ce-2231-4b70-88e8-5ec6d782cefd	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:47:37	54cefc06-2221-4a4d-bc40-96323ff42de4	TypeError:Cannot read properties of undefined (reading 'username')	GET	/users	http://localhost:5173
+2023-08-25	01:51:06	8f3211e6-8619-4220-94d0-634e718b8986	TypeError:Cannot read properties of undefined (reading 'username')	GET	/users	http://localhost:5173
+2023-08-25	01:51:56	c4bf4228-10c3-4b2d-b445-4c12db35b0e9	TypeError:Cannot read properties of undefined (reading 'username')	GET	/users	http://localhost:5173
+2023-08-25	01:52:17	237507eb-510f-4f9b-9992-967444735ea5	TypeError:Cannot read properties of undefined (reading 'username')	GET	/users	http://localhost:5173
+2023-08-25	01:52:17	9db8e210-84c2-4e2b-a190-d34ec4a52a0d	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:52:20	49e1837a-bf02-4653-832b-7d0a0048183d	TypeError:Cannot read properties of undefined (reading 'username')	GET	/users	http://localhost:5173
+2023-08-25	01:53:02	c6d1a7b1-33eb-4553-8567-a6017c996142	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:53:02	f8db1e29-4ea7-4885-b58c-d2fd570215d8	TypeError:Cannot read properties of undefined (reading 'username')	GET	/users	http://localhost:5173
+2023-08-25	01:54:37	883b7de6-a85c-410c-8735-cb1d83bf0745	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:54:52	65e93c1f-a9e1-4fc0-9365-424f1628fc69	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:55:07	010aeba9-0589-4e82-9e47-1302dfd148a6	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:55:23	6f4c67af-6d66-444c-b3f0-400668403e3b	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:55:38	929160c5-8976-4644-8ecb-d2fe2fcaf7c7	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:55:53	407a2617-ae6b-4dbd-9ada-09a64ee4ddaf	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:56:08	b80eb8f2-e37f-4973-9393-bde67db48b5a	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:56:23	2fe31d4c-77f6-4b8a-8e7b-2b2d4843796d	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:56:38	7c90e9c5-027e-4f48-94d4-1bf79a1abf46	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:56:53	87a326b0-dfa0-4a99-a063-0e581347a755	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:57:08	c4cfe281-5ac3-4c83-8c4e-4cf90c506438	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:57:23	03423a9c-d5e8-43a0-9e90-1e3dbabdeea5	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:57:38	b5d3882a-2f76-4edb-9550-e8d31a490dc4	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:57:53	0ebb5bba-771a-44c6-b775-c2739f03110a	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:58:08	aaf26ca5-cf8d-4238-b8a3-c77d54eb117e	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:58:23	20982c00-d20f-4168-bcb3-b36135cc1d4f	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:58:53	a4e8554d-b84b-4751-90f5-880d6a24ee1b	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	01:59:08	3ff99c40-0051-4a33-b19f-cba49c331b67	TypeError:Cannot read properties of undefined (reading 'username')	GET	/notes	http://localhost:5173
+2023-08-25	14:56:33	f837efa4-8efa-4eba-a29f-764a5f36bae8	MongoServerError:BSON field 'collation.local' is an unknown field.	POST	/notes	http://localhost:5173
+2023-08-25	15:00:36	d2cd069c-7ec1-4bfb-a449-eeb9dcd50e4b	MongoServerError:BSON field 'collation.local' is an unknown field.	POST	/notes	http://localhost:5173
+2023-08-25	15:24:59	e1429e89-7a16-4733-8664-d4d39004061c	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:25:14	c2a53f74-c330-43d0-9555-51ccb01fa1da	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:25:41	a771f424-0406-417d-abbb-5f5a023aadad	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:26:07	ced34eb1-6f37-4f78-bc82-49aa4982cc62	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:27:53	748b2656-7996-4d2c-8b1f-3d30e103a43d	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:28:06	a259ac2c-0f79-4f3e-ac2b-42f778c849ba	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:28:25	08f8eda4-1496-4ae6-9803-415172e7cb70	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:28:54	00c2c3fc-596f-4a5e-a522-740a0fa4ee17	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:29:07	a06069fe-71b1-4c44-bd33-0e6b1e6e21d9	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:29:24	290b28d3-58e2-440a-b233-9b88ed0da050	Error:Not allowed by CORS	GET	/socketcluster/	moz-extension://732b7fac-cc3f-4184-b4f7-ac3dafc916ab
+2023-08-25	15:42:32	30d191fd-55e7-4060-bca6-c8bfd4b81263	TypeError:Note.create(...).exec is not a function	POST	/notes	http://localhost:5173
+2023-08-25	15:52:31	badd05a8-f50d-43f7-a0e6-ef8d8ed6651c	TypeError:Note.save is not a function	POST	/notes	http://localhost:5173
+2023-08-25	15:53:47	ba888a0c-58ca-4c3d-8c32-1a66caec4885	TypeError:Note.save is not a function	POST	/notes	http://localhost:5173
+2023-08-25	15:55:07	274bee19-ca47-4ab5-b416-d58e7b730b1d	TypeError:Note.save is not a function	POST	/notes	http://localhost:5173

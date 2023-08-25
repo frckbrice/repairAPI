@@ -10,14 +10,20 @@ const userSchema = mongoose.Schema({
     type: String,
     require: [true, "A user must have a password"],
   },
-  roles: [{
-    type: String,
-    default:'Employee'
-  }],
+  // roles: [{
+  //   type: String,
+  //   default:'Employee'
+  // }],
+  roles:  // this is more preferable than the prviews
+    {
+      type: [String],
+      default: ["Employee"],
+    },
+  
   active: {
     type: Boolean,
     default: true,
-  }
+  },
 });
 
 module.exports = mongoose.model("user", userSchema);

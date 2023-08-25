@@ -7,21 +7,21 @@ module.exports = {
   //@desc Login
   //@route POST /auth
   //@access Public
-  login: asyncHandler(async (req, res) => {
+  login: async (req, res) => {
     const { username, password } = req.body;
-
+    console.log(username, password)
     if (!username || !password) {
       return res.status(400).json({ msg: "All fields are required" });
     }
 
     const foundUser = await User.findOne({ username }).exec();
-
+    console.log(foundUser)
     if (!foundUser || !foundUser.active) {
-      return res.status(401).json({ msg: "not found oe inactive Unauthorized" });
+      return res.status(401).json({ msg: "not found or inactive Unauthorized" });
     }
-    
+       
     const match = await bcrypt.compare(password, foundUser.password);
-
+    console.log(match)
     if (!match) {
       return res.status(401).json({ msg: "not match Unauthorized" });
     }
@@ -57,12 +57,12 @@ module.exports = {
 
     // Send accessToken containing username and roles
     res.json({ accessToken });
-  }),
+  },
 
   //@desc Refresh
   //@route Get /auth/refresh
   //@access Public - because access token has expired
-  refresh: (req, res) => {
+  refresh: async(req, res) => {
     const cookies = req.cookies;
 
     if (!cookies?.jwt) {
@@ -79,7 +79,7 @@ module.exports = {
           return res.status(403).json({ msg: "Forbidden" });
         }
 
-        const foundUser = User.findOne({
+        const foundUser = await User.findOne({
           username: decodedInfo.username,
         }).exec();
 
@@ -105,7 +105,7 @@ module.exports = {
 
   //@desc Logout
   //@route POST /auth/logout
-  //@access Public - just clear the cookie if exists
+  //@access Public -  just clear the cookie if exists
   logout: asyncHandler(async (req, res) => {
     const cookies = req.cookies;
     if(!cookies?.jwt) {
